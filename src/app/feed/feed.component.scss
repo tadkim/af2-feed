@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+
+.selectBox {
+    select {
+        border-radius: 0px;
+        @include size(120px, 40px);
+    }
+}

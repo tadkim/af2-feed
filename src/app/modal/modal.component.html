@@ -1,0 +1,35 @@
+<div *ngIf="isModal" class="modal-wrap">
+  <button class="btn-close"
+      (click)="close()"><i class="material-icons">close</i>
+  </button>
+  <div class="modal-container">
+
+      <div class="modal-top"> 
+        11
+      </div>
+      
+      
+      <div class="modal-bottom"> 
+        <h1> Login </h1>
+        <div class="login-feature">
+          <!--<p> 로그인 사용자 : {{ (af.auth | async)?.uid }} </p>-->
+          <div class="btn-socialLogin" (click)="login('google')"> Continue with Google</div>
+          <div class="btn-socialLogin" (click)="login('facebook')"> Continue with Facebook</div>
+          <div class="btn-socialLogin" *ngIf="name" (click)="logout()">Logout</div>
+        </div>
+        <p> sign in or sign up with email </p>
+        <p class="info">
+          To use Medium you must have cookies enabled.
+          If you sign up with Twitter or Facebook, 
+          we’ll start you off with a network by automatically 
+          importing any followers/followees or friends already 
+          on Medium. Also, we’ll never post to Twitter or Facebook
+          without your permission. 
+          For more info, please see Login <a>FAQ.</a>
+        </p>
+      </div>
+
+  </div>
+  
+
+</div>

@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+@import './reset';
+@import '../utils/_mixins';
+@import '../utils/_variables';
+
+.header {
+    
+    
+    @include size(960px, auto);    
+    margin: 10px auto;
+
+    @include flex(flex, row nowrap);
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    nav {
+        
+        @include size(60%, 80px);
+        @include flex(flex, row nowrap);
+        align-items: flex-end;
+
+        a {
+            font-family: $font-nanumSquare;
+            font-size:24px;
+            font-weight:700;
+            letter-spacing: -1px;
+
+            &:nth-of-type(2){
+                
+                margin-left: 10px;
+
+                color: $grey-400;
+                font-size:20px;
+            }
+        }
+
+
+    }
+    .login {
+        @include size(30%, 80px);
+        right: 0;
+
+
+        .user-menu{
+            span {
+                color: $grey-700;
+                margin: 0 10px;
+                font-size:16px;
+                font-weight:300;
+                letter-spacing: -.5px;
+            }
+        
+            .here {
+                color: $main-color;
+            }
+
+            i {
+                vertical-align: middle;
+                color: $grey-700;
+            }
+
+        }
+
+
+
+    }
+}
+
+
+#wrap {
+    @include size(960px, auto);
+    margin: 100px auto;
+
+    .title {
+        @include size(100%, 100px);
+        border-bottom: 1px solid $grey-400;
+        margin-bottom: 30px;
+
+        
+        h1 {
+            font-family: $font-nanumSquare;
+            margin-bottom:0;
+        }
+        p {
+            font-family: $font-nanumSquare;
+        }
+    }
+}
+

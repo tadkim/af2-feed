@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@import '../../assets/_globals';
+
+
+.modal-wrap {
+    @include size(100%, 100%);
+    background-color:white;
+    opacity:0.8;
+    position: fixed;
+    .btn-close {
+        @include size(60px, 60px);
+        right:0;
+        color:black;
+        background:none;
+        border: 2px solid black;
+        padding: 10px;
+    }
+    
+    .modal-container {
+        @include size(400px, 600px);
+        @include flex(flex, column nowrap);
+        margin: 10% auto;
+        
+        padding: 30px;
+
+        background-color: black;
+        opacity: 1;
+        .modal-top {
+            @include size(40%, 40%);
+        }
+        .modal-bottom {
+            @include size(100%, 60%);
+            color: white;
+            text-align: center;
+
+            .btn-socialLogin{
+                @include size(100%, auto);
+                border: 2px solid $grey-700;
+                margin-top: 8px;
+                padding: 4px;
+                text-align: center;
+            }
+
+            .info {
+                margin-top:20px;
+                font-size: 12px;
+                text-align: left;
+
+            }
+
+        }
+    }
+    
+
+    
+
+
+
+}

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+// @import '../utils/variables';
+
+
+
+
+html:lang(ko) {
+  font-size: 18px; //default font size
+} 
+
+/*styling*/
+
+html {
+  font-size: $fontSize0;
+  font-family: $font-sans;
+  line-height: $lineHeight0;
+}
+
+body {
+  font-size: $fontSize0;
+  line-height: $lineHeight0;
+}
+
+
+
+p {
+  margin-top: $margin-height2;
+  margin-bottom: $margin-height1;
+}
+
+h1 {
+  font-size: $fontSize1;
+}
+
+h2 {
+  margin-top: $margin-height4;
+  font-size: $fontSize2;
+  font-weight: bold;
+}
+
+
+/*h3요소가 앞에 존재하는 h2를 선택*/
+
+h3~h2 {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: $fontSize0;
+  margin-top: $margin-height1;
+}
+
+blockquote {
+  font-family: $fontCol-blockquote;
+  font-size: $fontSize3;
+  font-weight: 400;
+  color: $fontCol-blockquote;
+  line-height: $lineHeight1;
+  letter-spacing: -0.04rem;
+  margin-bottom: $margin-height3;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+alt {
+  text-align: center;
+  
+
+}
+//editable area (for development)
+
+//sidenav
+$font-items: 90%;
+
+//footer > copyright
+$fontSize-copyright: 70%;

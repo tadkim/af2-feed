@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+@import 
+    './base/_reset',
+    './utils/_mixins',
+    './utils/_variables',
+    './base/_grid';
+
+
+// Z-Index
+// --------------------------------------------------
+// Grouped by elements which would be siblings
+
+$z-index-content-index:           10;
+$z-index-content-item:            20;
+
+
+select {
+
+    @include size(120px, auto);
+    box-shadow: none;
+    border:none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+
+
+    border: 1.5px solid black;
+    border-radius: 0px;
+    font-family: $font-sans;
+    font-weight:200;
+
+    padding:10px;
+}
+
+
+span {
+    font-family: $font-sans;
+}

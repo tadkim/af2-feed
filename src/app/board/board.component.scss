@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+@import '../../assets/_globals';
+
+
+$ani-show : show .2s ease-out forwards; 
+$ani-fadeIndown: fadeInDown  ease-out .8s;
+
+
+/* 다수의 element에 동일 class를 부여해놓고, index 순서로 animation 지정하는 방법 */
+@for $i from 0 through 8 {
+  .cup:nth-of-type(#{$i}) {
+    animation: $ani-show;
+    animation-delay: ($i/8)+s;
+  } 
+}
+
+
+
+
+.filter {
+    margin: 80px 0 20px 0;
+    span {
+        margin-left:20px;
+        &:nth-of-type(1){ margin-left:0; }
+        padding-bottom:6px;
+
+        font-family: $font-nanumSquare;
+        color: $grey-500;
+    }
+
+    .active {
+        color: black;
+        border-bottom: 1.5px solid $main-color;
+    }
+    
+}
+
+#cup-container{
+    @include size(960px, auto);
+    @include flex(flex, row wrap);
+    justify-content: flex-start;
+
+    .cup {
+        @include size(24%, 300px);
+        @include flex(flex, column nowrap);
+        justify-content: space-between;
+        align-items: center;
+
+        // border: 2px solid black;
+        margin: 4px;
+        padding: 20px 10px;
+        text-align: center;
+
+        // anima - s -
+        transform-origin: 0 0;
+        transform: scale(0);
+        border-radius: 2px;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        // anima - e - 
+
+        
+        img {
+            @include size(60%, auto);
+        }
+        p {
+            font-family: $font-nanumSquare;
+            font-weight:800;
+            margin:0;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+@keyframes show {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(0.6); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; } 
+}
+
+@keyframes fadeInDown {
+  from { transform: translate3d(0, -40%, 0); opacity: 0; }
+  to { transform: none; opacity: 1; } 
+}

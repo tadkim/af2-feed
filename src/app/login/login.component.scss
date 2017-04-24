@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import '../../assets/_globals';
+
+.user-menu{
+    span {
+        color: $grey-700;
+        margin: 0 10px;
+        font-size:16px;
+        font-weight:300;
+        letter-spacing: -.5px;
+    }
+   
+    .here {
+        color: $main-color;
+    }
+
+    i {
+        vertical-align: middle;
+        color: $grey-700;
+    }
+
+}

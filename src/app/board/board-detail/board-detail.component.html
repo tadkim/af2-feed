@@ -1,0 +1,105 @@
+
+
+<div class="cup" *ngIf="cup">
+  <div class="cup-img">이미지</div>
+  <div class="cup-row">
+    <div class="label">이름</div>
+    <div class="value">{{ (cup | async)?.name }}</div>
+  </div>
+
+  <div class="cup-row">
+    <div class="label">제품 사이즈</div>
+    <div class="value">{{ (cup | async)?.size }}</div>
+  </div>
+
+  <div class="cup-row">
+    <div class="label">가격</div>
+    <div class="value">{{ (cup | async)?.price }}</div>
+  </div>
+  <div class="cup-row">
+    <div class="label">제조국</div>
+    <div class="value">{{ (cup | async)?.country }}</div>
+  </div>
+  <div class="cup-row">
+    <div class="label">공식 홈페이지</div>
+    <div class="value">
+      <a href="{{ (cup | async)?.officialsite }}"><i class="material-icons">link</i></a>
+    </div>
+  </div>
+</div>
+
+<!--tag도 ng-content 형태로 제작하기 -->
+<div class="detail-tag">
+  <button>손잡이 있는 </button>
+  <button>Diva Cup  </button>
+  <button>ISO 13485</button>
+  <button>FSC</button>
+</div>
+
+<div class="detail-action">
+  <div class="action-container">
+    <button><i class="material-icons">favorite_border</i></button>
+    <span>393</span> <!-- 좋아요 수 -->
+
+    <button><i class="material-icons">chat_bubble_outline</i></button>
+    <span>21</span>  <!-- 댓글 수 -->
+  </div>
+
+  <div class="share-container">
+    <button><i class="material-icons">public</i></button> <!-- sns1 : facebook -->
+    <button><i class="material-icons">public</i></button> <!-- sns1 : twitter -->
+  </div>
+
+</div>
+
+<div class="detail-nav">
+  <button class="btn-back" (click)="goBack()"><i class="material-icons">arrow_back</i></button>
+  <button class="btn-back" (click)="goBack()"><i class="material-icons">home</i></button>
+</div>
+
+
+<section class="detail-footer">
+  <p class="sub-title">Relative Content</p>
+  <div class="related-content">
+
+    <div class="related-item"  [ngStyle]="{'background-image': 'url(assets/img/test_2d.png)'}">
+        <p>메루나컵 L</p>
+    </div>
+    <div class="related-item"  [ngStyle]="{'background-image': 'url(assets/img/test_2d.png)'}">
+        <p>유니컵 L</p>
+    </div>
+    <div class="related-item"  [ngStyle]="{'background-image': 'url(assets/img/test_2d.png)'}">
+        <p>디바컵 L</p>
+    </div>
+  </div>
+
+  <div class="response">
+    
+    <!-- 댓글 입력 창 -->
+    <p>Response</p>
+    <div class="user-response">
+      <span>댓글을 작성해보세요 :D</span>
+    </div>
+
+    <!-- 이미 작성되어있는 댓글 -->
+    <div class="attached-response">
+      <div><span>댓글 1</span></div>
+      <div><span>댓글 2</span></div>
+      <div><span>댓글 3</span></div>
+      <div><span>댓글 4</span></div>
+    </div>
+
+  </div> <!-- .response -E- -->
+
+</section>
+
+
+
+
+
+<!-- 추후 사용자 feed 적용 시 참고 부분 
+<div>
+  <input [(ngModel)]="cup.name" placeholder="name" />  
+  <button (click)="save()">Save</button>
+</div>
+-->
