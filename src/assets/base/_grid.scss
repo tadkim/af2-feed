@@ -40,8 +40,6 @@
     .login {
         @include size(30%, 80px);
         right: 0;
-
-
         .user-menu{
             span {
                 color: $grey-700;
@@ -59,11 +57,7 @@
                 vertical-align: middle;
                 color: $grey-700;
             }
-
         }
-
-
-
     }
 }
 
@@ -87,4 +81,3 @@
         }
     }
 }
-

@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import '../../assets/_globals';
+
+
+
+.footer {
+    @include size(100%, 100px);
+    @include flex(flex, row nowrap);
+    justify-content: space-around;
+    align-items: center;
+    .footer-box {
+        @include size(30%, 60px);
+        border: 2px solid white;
+        padding:10px;
+        
+    }
+    background-color: black;
+    color: white;    
+}
+

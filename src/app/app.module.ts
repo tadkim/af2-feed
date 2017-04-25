@@ -21,6 +21,7 @@ import { ModalComponent } from './modal/modal.component';
 
 // module
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -31,7 +32,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     BoardComponent,
     BoardDetailComponent,
     LoginComponent,
-    ModalComponent
+    ModalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
