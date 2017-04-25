@@ -13,6 +13,7 @@ import { Cup } from './model/cup';
 export class AppService {
   
   cups: FirebaseListObservable<any>;
+
   
 
 
@@ -23,6 +24,7 @@ export class AppService {
       }
     });
     this.cups.forEach(i => { console.log(i); });
+    
   }
 
   

@@ -1,0 +1,23 @@
+
+<section class="relative-container">
+    <p class="sub-title">Relative Content</p>
+
+
+    <div class="related-item"
+      [ngStyle]="{'background-image': 'url(assets/img/test_2d.png)'}"
+      (click)="gotoDetail(index.prev)">
+        <p>{{ (prevCup | async)?.name }} {{ (prevCup | async)?.size_eng }}  L</p>
+    </div>
+    
+    <div class="related-item"
+      [ngStyle]="{'background-image': 'url(assets/img/test_2d.png)'}">
+        <p>{{ (currentCup | async)?.name }} {{ (currentCup | async)?.size_eng }}  L</p>
+    </div>
+    <div class="related-item"
+      [ngStyle]="{'background-image': 'url(assets/img/test_2d.png)'}"
+      (click)="gotoDetail(index.next)">
+        <p>{{ (nextCup | async)?.name }} {{ (nextCup | async)?.size_eng }}  L</p>
+    </div>
+
+
+</section>

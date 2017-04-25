@@ -33,6 +33,7 @@ export class BoardDetailComponent implements OnInit {
       this.albumId = parseInt(urlParameters['id']);
    });
     this.cup = this.appService.getCup(this.albumId);
+    
     window.scrollTo(0, 0); 
   }
 

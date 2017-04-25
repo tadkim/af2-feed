@@ -14,14 +14,21 @@ import { AppService } from './app.service';
 //component
 import { AppComponent } from './app.component';
 import { FeedComponent } from './feed/feed.component';
+
 import { BoardComponent } from './board/board.component';
 import { BoardDetailComponent } from './board/board-detail/board-detail.component';
+import { RelativeContentComponent } from './board/board-detail/relative-content/relative-content.component';
+
+
 import { LoginComponent } from './login/login.component';
 import { ModalComponent } from './modal/modal.component';
 
+import { FooterComponent } from './footer/footer.component';
+
+
+
 // module
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -31,6 +38,7 @@ import { FooterComponent } from './footer/footer.component';
     FeedComponent,
     BoardComponent,
     BoardDetailComponent,
+    RelativeContentComponent,
     LoginComponent,
     ModalComponent,
     FooterComponent
