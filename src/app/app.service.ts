@@ -19,9 +19,10 @@ export class AppService {
   constructor(private af: AngularFire) {
     this.cups = af.database.list('/allcup', {
       query: {
-        orderByChild: 'id'
+        orderByChild: 'name_eng'
       }
     });
+    this.cups.forEach(i => { console.log(i); });
   }
 
   

@@ -1047,33 +1047,57 @@ span {
 
 .cup:nth-of-type(1) {
   animation: show 0.2s ease-out forwards;
-  animation-delay: 0.125s; }
+  animation-delay: 0.07143s; }
 
 .cup:nth-of-type(2) {
   animation: show 0.2s ease-out forwards;
-  animation-delay: 0.25s; }
+  animation-delay: 0.14286s; }
 
 .cup:nth-of-type(3) {
   animation: show 0.2s ease-out forwards;
-  animation-delay: 0.375s; }
+  animation-delay: 0.21429s; }
 
 .cup:nth-of-type(4) {
   animation: show 0.2s ease-out forwards;
-  animation-delay: 0.5s; }
+  animation-delay: 0.28571s; }
 
 .cup:nth-of-type(5) {
   animation: show 0.2s ease-out forwards;
-  animation-delay: 0.625s; }
+  animation-delay: 0.35714s; }
 
 .cup:nth-of-type(6) {
   animation: show 0.2s ease-out forwards;
-  animation-delay: 0.75s; }
+  animation-delay: 0.42857s; }
 
 .cup:nth-of-type(7) {
   animation: show 0.2s ease-out forwards;
-  animation-delay: 0.875s; }
+  animation-delay: 0.5s; }
 
 .cup:nth-of-type(8) {
+  animation: show 0.2s ease-out forwards;
+  animation-delay: 0.57143s; }
+
+.cup:nth-of-type(9) {
+  animation: show 0.2s ease-out forwards;
+  animation-delay: 0.64286s; }
+
+.cup:nth-of-type(10) {
+  animation: show 0.2s ease-out forwards;
+  animation-delay: 0.71429s; }
+
+.cup:nth-of-type(11) {
+  animation: show 0.2s ease-out forwards;
+  animation-delay: 0.78571s; }
+
+.cup:nth-of-type(12) {
+  animation: show 0.2s ease-out forwards;
+  animation-delay: 0.85714s; }
+
+.cup:nth-of-type(13) {
+  animation: show 0.2s ease-out forwards;
+  animation-delay: 0.92857s; }
+
+.cup:nth-of-type(14) {
   animation: show 0.2s ease-out forwards;
   animation-delay: 1s; }
 

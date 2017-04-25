@@ -1,15 +1,13 @@
 
 <div class="filter">
-  <span [class.active]="selectedFilter === 'name'"> 이름(ABC순) </span>
+  <span [class.active]="selectedFilter === 'name'"> 제품 이름(ABC순) </span>
   <span> 브랜드(ABC순) </span>
-  <span> 가격(높은순) </span>
-  <span> 가격(낮은순) </span>
 </div>
 
 
 
 <div id="cup-container">
-  <div *ngIf="isLoading"> 로딩중</div>
+  
   <!-- ngclass ver
   <div class="cup"
     *ngFor="let cup of cups | async; let i = index;"
@@ -21,9 +19,10 @@
   -->
 
   <div class="cup"
-    *ngFor="let cup of cups | async; let i = index;"
+    *ngFor="let cup of cups | async"
     (click)="gotoDetail(cup)">
-      <img src="assets/img/test_2d.png" />
+      <img src={{cup.imgUrls}} />
+
       <p>{{cup.name}}</p>
   </div>
 </div>

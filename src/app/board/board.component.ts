@@ -12,21 +12,15 @@ import { Router } from '@angular/router';
 })
 export class BoardComponent implements OnInit{
   cups: FirebaseListObservable<Cup[]>;
-  isLoading: boolean = false;
   
-  
-
   selectedFilter: string = 'name'; //test
-  
 
-
-  
   constructor( private router: Router, private appService: AppService) {
     this.cups = appService.getCups();
+    
   }
 
   ngOnInit() {
-    this.isLoading = false;
     
   }
 
@@ -34,6 +28,7 @@ export class BoardComponent implements OnInit{
     let link = ['/detail', cup.$key];
     this.router.navigate(link);
   }
+
 
   getAnimationByIndex(index: any){
     let eachCupClass = 'ani-' + index;

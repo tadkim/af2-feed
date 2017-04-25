@@ -6,12 +6,14 @@
 $ani-show : show .2s ease-out forwards; 
 $ani-fadeIndown: fadeInDown  ease-out .8s;
 
+$cup-length: 14;
+
 
 /* 다수의 element에 동일 class를 부여해놓고, index 순서로 animation 지정하는 방법 */
-@for $i from 0 through 8 {
+@for $i from 0 through $cup-length {
   .cup:nth-of-type(#{$i}) {
     animation: $ani-show;
-    animation-delay: ($i/8)+s;
+    animation-delay: ($i/$cup-length)+s;
   } 
 }
 
@@ -40,6 +42,7 @@ $ani-fadeIndown: fadeInDown  ease-out .8s;
     @include size(960px, auto);
     @include flex(flex, row wrap);
     justify-content: flex-start;
+    
 
     .cup {
         @include size(24%, 300px);
@@ -53,10 +56,12 @@ $ani-fadeIndown: fadeInDown  ease-out .8s;
         text-align: center;
 
         // anima - s -
+        
         transform-origin: 0 0;
         transform: scale(0);
         border-radius: 2px;
         box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        
         // anima - e - 
 
         

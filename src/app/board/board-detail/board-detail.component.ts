@@ -32,7 +32,8 @@ export class BoardDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.albumId = parseInt(urlParameters['id']);
    });
-   this.cup = this.appService.getCup(this.albumId);
+    this.cup = this.appService.getCup(this.albumId);
+    window.scrollTo(0, 0); 
   }
 
 

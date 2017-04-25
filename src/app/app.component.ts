@@ -10,10 +10,6 @@ export class AppComponent {
   title = '꽤 살만한 생리컵을 모았어요';
   name: string;
 
-  //for test
-  // defaultImage = 'assets/img/test_2d.png';
-  finalImage = 'assets/img/testcup.png';
-  offset = 100;
 
   isModal: boolean = false;
   
