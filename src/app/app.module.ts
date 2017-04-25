@@ -24,11 +24,12 @@ import { LoginComponent } from './login/login.component';
 import { ModalComponent } from './modal/modal.component';
 
 import { FooterComponent } from './footer/footer.component';
+import { Page404Component } from './page404.component';
 
 
 
-// module
-import { LazyLoadImageModule } from 'ng-lazyload-image';
+
+
 
 
 
@@ -41,14 +42,14 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     RelativeContentComponent,
     LoginComponent,
     ModalComponent,
-    FooterComponent
+    FooterComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    LazyLoadImageModule,
     AngularFireModule.initializeApp(firebaseConfig, firebaseGoogleAuthentication)// firebase 를 사용하겠다는 초기설정
 
   ],

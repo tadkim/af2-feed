@@ -55,24 +55,35 @@ $cup-length: 14;
         padding: 20px 10px;
         text-align: center;
 
-        // anima - s -
-        
-        transform-origin: 0 0;
-        transform: scale(0);
-        border-radius: 2px;
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-        
-        // anima - e - 
-
         
         img {
             @include size(60%, auto);
+            // hover - s- 
+            transform: scale(1);
+            transition: .2s ease-in-out;
+            // hover - e -
+
+        
+            &:hover {    
+                transform: scale(1.1);
+            }
         }
         p {
             font-family: $font-nanumSquare;
             font-weight:800;
             margin:0;
         }
+
+
+
+        // anima - s -
+        transform-origin: 0 0;
+        transform: scale(0);
+        border-radius: 2px;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);        
+        // anima - e - 
+
+
     }
 
 

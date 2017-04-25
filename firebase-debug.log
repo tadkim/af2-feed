@@ -1,0 +1,69 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /Users/admin/.nvm/versions/node/v6.9.1/bin/node /Users/admin/.nvm/versions/node/v6.9.1/bin/firebase deploy
+[debug] CLI Version:  3.6.1
+[debug] Platform:     darwin
+[debug] Node Version: v6.9.1
+[debug] Time:         Wed Apr 26 2017 03:08:33 GMT+0900 (KST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/EhDC1WDsBcifoNonDVTFFZvod608Ei3w7ajTvWzIbEhoYKdnT32JAVdPOETlc-Gz',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Apr 26 2017 03:08:33 GMT+0900 (KST)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/af2-feed  
+ Wed Apr 26 2017 03:08:33 GMT+0900 (KST)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/af2-feed/tokens  
+ Wed Apr 26 2017 03:08:34 GMT+0900 (KST)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'af2-feed'...
+[info] 
+[info] i  deploying database, functions, hosting
+[info] ✔  database: rules ready to deploy.
+[debug] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "^4.1.2",
+    "firebase-functions": "^0.5"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/af2-feed?view=CONSUMER_VIEW  
+ Wed Apr 26 2017 03:08:37 GMT+0900 (KST)
+[debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/af2-feed?view=CONSUMER_VIEW  
+ Wed Apr 26 2017 03:08:37 GMT+0900 (KST)
+[debug] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/af2-feed  
+ Wed Apr 26 2017 03:08:39 GMT+0900 (KST)
+[debug] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/af2-feed/apiKeys  
+ Wed Apr 26 2017 03:08:39 GMT+0900 (KST)
+[debug] <<< HTTP RESPONSE 200
+[debug] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/af2-feed/configs  
+ Wed Apr 26 2017 03:08:43 GMT+0900 (KST)
+[debug] <<< HTTP RESPONSE 200
+[debug] > [functions] runtime config materialized as: {
+  "firebase": {
+    "databaseURL": "https://af2-feed.firebaseio.com",
+    "storageBucket": "af2-feed.appspot.com",
+    "apiKey": "AIzaSyDt1tu1JFfXfxUG-KOYIwaavQeMjhjVu9g",
+    "authDomain": "af2-feed.firebaseapp.com"
+  }
+}
+[debug] > [functions] parsed triggers: []
+[info] i  hosting: preparing dist directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/af2-feed/uploads/-KiaIGKXBbJL9PEgUYc-?fileCount=35&message=  
+ Wed Apr 26 2017 03:08:45 GMT+0900 (KST)
